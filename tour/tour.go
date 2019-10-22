@@ -19,6 +19,41 @@ func main() {
 	demoRanges()
 	demoMaps()
 	demoMethods()
+	demoInterfaces()
+}
+
+type listOper interface {
+	listCreate()
+	listAdd(n int)
+	listDestroy()
+}
+
+// List is structure to implemente linked list
+type List struct {
+	element int
+	next    *List
+}
+
+func (list List) listCreate() {
+	fmt.Println("List successfully created")
+}
+
+func (list List) listAdd(n int) {
+	fmt.Printf("List added element : %d\n", n)
+}
+
+func (list List) listDestroy() {
+	fmt.Println("List successfully destroyed")
+}
+
+func demoInterfaces() {
+	var mylist List
+
+	fmt.Println("Demo of Interfaces")
+	mylist.listCreate()
+	mylist.listAdd(4)
+	mylist.listDestroy()
+
 }
 
 // Vertex is a structure of X and Y
