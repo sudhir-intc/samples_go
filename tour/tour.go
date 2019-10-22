@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"time"
 )
 
@@ -17,9 +18,44 @@ func main() {
 	demoSlices()
 	demoRanges()
 	demoMaps()
+	demoMethods()
+}
+
+// Vertex is a structure of X and Y
+type Vertex struct {
+	X, Y float64
+}
+
+// Abs is a method of Vertex
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+// Scale is a method of Vertex
+func (v *Vertex) Scale(f float64) {
+	v.X *= f
+	v.Y *= f
+}
+
+func demoMethods() {
+
+	fmt.Println("Demo of Methods")
+	v := Vertex{3, 4}
+	fmt.Println(v)
+	fmt.Printf("Absolute value: %v\n", v.Abs())
+	v.Scale(20)
+	fmt.Println(v)
 }
 
 func demoMaps() {
+	var m = map[string]int{
+		"car":  1,
+		"bike": 2,
+	}
+	fmt.Println(m)
+	for v := range m {
+		fmt.Printf("map[%s] = %d\n", v, m[v])
+	}
 
 }
 
