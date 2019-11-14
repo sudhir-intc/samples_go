@@ -34,15 +34,15 @@ type List struct {
 	next    *List
 }
 
-func (list List) listCreate() {
+func (list *List) listCreate() {
 	fmt.Println("List successfully created")
 }
 
-func (list List) listAdd(n int) {
+func (list *List) listAdd(n int) {
 	fmt.Printf("List added element : %d\n", n)
 }
 
-func (list List) listDestroy() {
+func (list *List) listDestroy() {
 	fmt.Println("List successfully destroyed")
 }
 
