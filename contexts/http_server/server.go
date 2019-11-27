@@ -26,7 +26,7 @@ func main() {
 		log.Print("Starting the http server 2")
 		log.Fatal(http.ListenAndServe("localhost:9080", nil))
 	}()
-	log.Fatal(http.ListenAndServe("localhost:8080", nil))
+	log.Fatal(http.ListenAndServe("localhost:10080", nil))
 
 }
 
