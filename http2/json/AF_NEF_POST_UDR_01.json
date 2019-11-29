@@ -8,7 +8,7 @@
         "sd": "string"
     },
     "externalGroupId": "string",
-    "anyUeInd": false,
+    "anyUeInd": true,
     "subscribedEvents": [
         "UP_PATH_CHANGE"
     ],
@@ -17,7 +17,7 @@
     "ipv6Addr": "string",
     "macAddr": "string",
     "dnaiChgType": "EARLY",
-    "notificationDestination": "https://localhost:10080",
+    "notificationDestination": "http://example.com:80",
     "requestTestNotification": false,
     "websockNotifConfig": {
         "websocketUri": "",
