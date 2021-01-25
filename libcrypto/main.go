@@ -10,6 +10,11 @@ import (
 
 func main() {
 
+	if len(os.Args) < 2 {
+		fmt.Printf("Usage: %s \"string\"\n", os.Args[0])
+		return
+	}
+
 	cmd := os.Args[1]
 
 	fmt.Println("String passed:", cmd)
