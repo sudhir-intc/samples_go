@@ -118,34 +118,8 @@ const (
 //SignalingSAState type string
 type SignalingSAState string
 
-//SignalingSA states
-const (
-	//WaitForSignalingSA flag
-	WaitForSignalingSA SignalingSAState = "WaitForSignalingSA"
-	//SignalingSACreated flag
-	SignalingSACreated SignalingSAState = "SignalingSACreated"
-	//WaitforSATerminate flag
-	WaitforSATerminate SignalingSAState = "WaitforSATerminate"
-	//SignalingSATerminated flag
-	SignalingSATerminated SignalingSAState = "SignalingSATerminated"
-)
-
 //ChildSAState type string
 type ChildSAState string
-
-//ChildSA states
-const (
-	//WaitForChildSA flag
-	WaitForChildSA ChildSAState = "WaitForChildSA"
-	//ChildSACreated flag
-	ChildSACreated ChildSAState = "ChildSACreated"
-	//ChildSAFailed flag
-	ChildSAFailed ChildSAState = "ChildSAFailed"
-	//WaitForChildSATerminate flag
-	WaitForChildSATerminate ChildSAState = "WaitForChildSATerminate"
-	//ChildSATerminated flag
-	ChildSATerminated ChildSAState = "ChildSATerminated"
-)
 
 // UEContext is context stored at N3IWF  for each UE
 type UEContext struct {
