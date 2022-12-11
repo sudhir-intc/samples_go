@@ -3,23 +3,62 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
 	"time"
 )
 
-func main() {
-	defer demoDefer()
+var lang = "python"
 
-	declarationUsages()
-	demoForLoops()
-	demoSwitch()
-	demoPointers()
-	demoStructs()
-	demoArrays()
-	demoSlices()
-	demoRanges()
-	demoMaps()
-	demoMethods()
-	demoInterfaces()
+func main() {
+
+	var x, y int
+
+	randNum := rand.Intn((100))
+	fmt.Println("Hello Sudhir", randNum)
+	sqrt := math.Sqrt(float64(randNum))
+	fmt.Printf("Square root of %d is %g \n", randNum, sqrt)
+
+	x = 4
+	y = 5
+	sum := func(a, b int) int { return a + b }(x, y)
+	fmt.Printf("Sum of %d and %d is %d \n", x, y, sum)
+
+	a, b := func(x, y string) (string, string) { return y, x }("Swap", "Demo")
+	fmt.Println("Swapped values", a, b)
+
+	const n = 10
+
+	sum = 0
+
+	for i := 0; i < n; i++ {
+		sum += i
+	}
+	fmt.Printf("Sum of number first %d numbers %d\n", n, sum)
+
+	count := 1
+	for count < 10 {
+		count += count
+	}
+	if count > 0 {
+		fmt.Printf("Count :%d\n", count)
+	}
+
+	/*
+		defer demoDefer()
+
+
+		declarationUsages()
+		demoForLoops()
+		demoSwitch()
+		demoPointers()
+		demoStructs()
+		demoArrays()
+		demoSlices()
+		demoRanges()
+		demoMaps()
+		demoMethods()
+		demoInterfaces()
+	*/
 }
 
 type listOper interface {
